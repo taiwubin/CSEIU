@@ -1,0 +1,103 @@
+/* Table of Contents
+==================================================
+    #Layout
+    #Clearing
+*/ 
+
+
+/* #Layout     
+================================================== */
+
+    .container                                  { position: relative; width: 1100px; margin: 0 auto; padding: 0; }
+    
+    .container .a-post-size,
+    .container .left-area-size,
+    .container .main-nav-size,
+    .container .right-area-size,
+    .container .main-content-size,
+    .container .search-box-size,
+    .container .mini-thumb-size,
+    .container .post-excerpt-size,
+    .container .sidebar-left-size               { float: left; display: inline; }
+    
+    .container .columns-0                       { float: left; display: inline; margin-left: 0px; margin-right: 0px; }
+    .container .columns-10                      { float: left; display: inline; margin-left: 10px; margin-right: 10px; }
+    .container .columns-20                      { float: left; display: inline; margin-left: 20px; margin-right: 20px; }
+    .container .columns-30                      { float: left; display: inline; margin-left: 30px; margin-right: 30px; }
+    .container .columns-50                      { float: left; display: inline; margin-left: 50px; margin-right: 50px; }
+    
+    .row-10                                     { margin-bottom: 10px; }
+    .row-20                                     { margin-bottom: 20px; }
+    .row-40                                     { margin-bottom: 40px; }
+    
+    /* Nested Column Classes */
+    .columns-10.alpha,
+    .columns-20.alpha,
+    .columns-30.alpha,
+    .columns-50.alpha                           { margin-left: 0; }
+    
+    .columns-10.omega,
+    .columns-20.omega,
+    .columns-30.omega,
+    .columns-50.omega                           { margin-right: 0; }
+    
+    /* Base Grid */
+    
+    .container .mini-thumb-size                 { width: 280px; }
+    
+    .container .post-excerpt-size               { width: 350px; margin-left: 0px; margin-right: 10px; }
+    
+    .container .sidebar-left-size               { width: 270px; margin-left: 50px; margin-right: 30px; }
+   
+    .container .a-post-size                     { width: 660px; margin-left: 20px; margin-right: 20px; }
+    
+    .container .left-area-size                  { width: 70%; }
+    
+    .container .right-area-size                 { width: 29%; }
+    
+    .container .main-content-size               { width: 700px; }
+    
+    .container .main-container-size             { width: 1000px; }
+    
+    .container .search-box-size                 { width: 180px; }
+    
+    .container .main-nav-size                   { width: 820px; }
+
+ 
+    /* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before, .clearfix:after,
+    .row-10:before, .row-10:after,
+    .row-20:before, .row-20:after,
+    .row-40:before, .row-40:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row-10:after, 
+    .row-20:after, 
+    .row-40:after, 
+    .clearfix:after {
+      clear: both; }
+    
+    .row-10, .row-20, 
+    .row-40, .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }
