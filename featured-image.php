@@ -1,5 +1,7 @@
 <!-- featured images -->
 <section class="featured-bg-size featured-bg">
-    <img alt="" src="<?php bloginfo('template_url');?>/images/bg_feature.jpg">
+   <?php
+        echo do_shortcode('[smartslider2 slider="3"]');
+    ?>
 </section>
 
